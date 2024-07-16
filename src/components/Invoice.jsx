@@ -4,7 +4,7 @@ import { Page, Text, View, Document, StyleSheet, Image, PDFViewer, PDFDownloadLi
 // Define styles for PDF using @react-pdf/renderer
 const styles = StyleSheet.create({
   page: {
-    // padding: 30,
+    paddingTop: 30,
     paddingLeft:30,
     paddingRight:30,
     fontSize: 12,
@@ -22,8 +22,11 @@ const styles = StyleSheet.create({
     height: 40,
     backgroundColor: 'black',
     marginRight: 10,
+    left:-30
   },
   header2: {
+    left:30,
+    right:30,
     width: 370,
     height: 40,
     backgroundColor: 'orange',
