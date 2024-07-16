@@ -4,7 +4,9 @@ import { Page, Text, View, Document, StyleSheet, Image, PDFViewer, PDFDownloadLi
 // Define styles for PDF using @react-pdf/renderer
 const styles = StyleSheet.create({
   page: {
-    padding: 30,
+    // padding: 30,
+    paddingLeft:30,
+    paddingRight:30,
     fontSize: 12,
     fontFamily: 'Helvetica',
   },
