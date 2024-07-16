@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: 150,
-    src: ''
+    src: 'public/logo.jpg'
   },
   headerText: {
     textAlign: 'right',
@@ -112,7 +112,7 @@ const InvoiceDocument = ({ data }) => (
         <View style={styles.header1}><Text></Text></View>
         <Image
           style={styles.logo}
-          src="public/logo.jpg" // Replace with the path to your logo
+          src="/logo.jpg" // Replace with the path to your logo
         />
         <View style={styles.header2}><Text></Text></View>
       </View>
