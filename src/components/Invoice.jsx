@@ -13,21 +13,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    
     marginBottom: 20,
   },
-  header1:{
-    width : 60,
-    height:40,
-    left:-30,
-    backgroundColor:'black',
+  header1: {
+    width: 60,
+    height: 40,
+    backgroundColor: 'black',
+    marginRight: 10,
   },
-  header2:{
-    left:30,
-    width:370,
-    right:30,
-    height:40,
-    backgroundColor:'orange'
+  header2: {
+    width: 370,
+    height: 40,
+    backgroundColor: 'orange',
   },
   logo: {
     width: 150,
@@ -85,7 +82,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     textAlign: 'left',
-    borderRadius:'0'
   },
   footercolor: {
     position: 'absolute',
@@ -93,22 +89,21 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height:30,
-    backgroundColor:'orange'
+    height: 30,
+    backgroundColor: 'orange',
   },
   bg1: {
     backgroundColor: 'black',
     color: 'white',
     padding: 10,
-    borderRadius: 0,
     marginTop: 10,
-    textAlign: 'center'
+    textAlign: 'center',
   },
 });
 
 const InvoiceDocument = ({ data }) => (
   <Document>
-    <Page style={styles.page}>
+    <Page style={styles.page} size="A4">
       {/* Header Section */}
       <View style={styles.header}>
         <View style={styles.header1}><Text></Text></View>
@@ -119,10 +114,10 @@ const InvoiceDocument = ({ data }) => (
         <View style={styles.header2}><Text></Text></View>
       </View>
       <View style={styles.headerText}>
-          <Text style={styles.invoiceTitle}>INVOICE</Text>
-          <Text># {data.invoiceNumber}</Text>
-          <Text>{data.date}</Text>
-        </View>
+        <Text style={styles.invoiceTitle}>INVOICE</Text>
+        <Text># {data.invoiceNumber}</Text>
+        <Text>{data.date}</Text>
+      </View>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
         <View>
           <Text style={[styles.bold, { marginTop: 10 }]}>BILLED TO:</Text>
@@ -172,7 +167,7 @@ const InvoiceDocument = ({ data }) => (
       <Text style={{ marginTop: 30 }}>Sincerely,</Text>
       <Text style={{ marginTop: 10 }}>{data.managerName}</Text>
       <Text>Human Resource Manager</Text>
-      <Text >{data.companyName}</Text>
+      <Text>{data.companyName}</Text>
       <Text style={{ marginTop: 30 }}>
         If you have any questions or need further assistance, feel free to contact our support team at {data.supportEmail} or call us on {data.supportPhone}.
       </Text>
@@ -187,9 +182,7 @@ const InvoiceDocument = ({ data }) => (
           <Text style={{ textAlign: 'center' }}>{data.companyWebsite}</Text>
         </View>
       </View>
-      <View style={styles.footercolor}>
-          {/* <Text>hi</Text> */}
-      </View>
+      <View style={styles.footercolor}></View>
     </Page>
   </Document>
 );
