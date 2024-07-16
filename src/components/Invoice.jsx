@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: 150,
+    src: ''
   },
   headerText: {
     textAlign: 'right',
