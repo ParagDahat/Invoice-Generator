@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 2,
   },
   header1: {
     width: 60,
@@ -111,7 +111,7 @@ const InvoiceDocument = ({ data }) => (
         <View style={styles.header1}><Text></Text></View>
         <Image
           style={styles.logo}
-          src="src/assets/logo.jpg" // Replace with the path to your logo
+          src="public/logo.jpg" // Replace with the path to your logo
         />
         <View style={styles.header2}><Text></Text></View>
       </View>
